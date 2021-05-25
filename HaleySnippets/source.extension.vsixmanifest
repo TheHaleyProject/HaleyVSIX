@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="HaleySnippets.ed30e57a-9680-48d2-9654-afd0c201b547" Version="1.0.7" Language="en-US" Publisher="HaleyProject" />
+        <Identity Id="HaleySnippets.ed30e57a-9680-48d2-9654-afd0c201b547" Version="2.0.0" Language="en-US" Publisher="HaleyProject" />
         <DisplayName>HaleySnippets</DisplayName>
         <Description xml:space="preserve">Snippets and project templates for Haley</Description>
+        <ReleaseNotes>Updated to add all latest haley references in Templates</ReleaseNotes>
         <Icon>Haley.png</Icon>
         <PreviewImage>Haley.png</PreviewImage>
         <Tags>Haley, HaleyMVVM, HaleyLog, HaleyTemplates</Tags>
