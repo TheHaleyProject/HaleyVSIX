@@ -111,11 +111,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="ManifestScribble.txt" />
     <Content Include="Resources\haley_vsix.png" />
     <VSCTCompile Include="HaleyIconsExplorerPackage.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
     </VSCTCompile>
-    <Content Include="Resources\IconsExplorerCommand.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="IconsExplorerControl.xaml">

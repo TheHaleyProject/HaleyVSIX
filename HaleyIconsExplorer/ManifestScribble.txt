@@ -31,6 +31,21 @@
     group; your package should define its own command set in order to avoid collisions
     with command ids defined by other packages. -->
 
+    <Menus>
+      <Menu guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconsMenu" priority="0x0100" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EXTENSIONS"/>
+        <Strings>
+          <ButtonText>Icons Explorer</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconspackMenuGroup" priority="0x0600">
+        <Parent guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconsMenu"/>
+      </Group>
+    </Groups>
+    
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button
         or combo box in a toolbar. -->
@@ -42,8 +57,9 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
+      
       <Button guid="guidHaleyIconsExplorerPackageCmdSet" id="IconsExplorerCommandId" priority="0x0100" type="Button">
-        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+        <Parent guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconspackMenuGroup"/>
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>Icons Explorer</ButtonText>
@@ -70,9 +86,16 @@
       <IDSymbol name="IDM_VS_MENU_EXTENSIONS" value="0x0091" />
     </GuidSymbol>-->
     
+    <GuidSymbol name="guidSHLMainMenu" value="{d309f791-903f-11d0-9efc-00a0c911004f}">
+      <IDSymbol name="IDM_VS_MENU_EXTENSIONS" value="0x0091" />
+    </GuidSymbol>
+
+
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidHaleyIconsExplorerPackageCmdSet" value="{6915a83e-3065-453c-a7b2-9266a2ce2f56}">
-      <IDSymbol name="IconsExplorerCommandId" value="0x0100"/>
+      <IDSymbol name="haleyIconspackMenuGroup" value="4128"/>
+      <IDSymbol name="IconsExplorerCommandId" value="256"/>
+      <IDSymbol name="haleyIconsMenu" value="41"/>
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{14853b82-5cd9-4695-9667-c6b768e3f73d}" >

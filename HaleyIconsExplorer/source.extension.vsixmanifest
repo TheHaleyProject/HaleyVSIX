@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="HaleyIconsExplorer.81693cc7-9fed-4bac-8a90-1384df0cc901" Version="1.0.0" Language="en-US" Publisher="HaleyProjet" />
+        <Identity Id="HaleyIconsExplorer.81693cc7-9fed-4bac-8a90-1384df0cc901" Version="1.0.1" Language="en-US" Publisher="HaleyProjet" />
         <DisplayName>HaleyIconsExplorer</DisplayName>
         <Description xml:space="preserve">Exploring the icons present inside Haley.WPF.IconsPack nuget package.</Description>
         <ReleaseNotes>Pilot</ReleaseNotes>
