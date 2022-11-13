@@ -31,6 +31,21 @@
     group; your package should define its own command set in order to avoid collisions
     with command ids defined by other packages. -->
 
+    <Menus>
+      <Menu guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconsMenu" priority="0x0100" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EXTENSIONS"/>
+        <Strings>
+          <ButtonText>Icons Explorer</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconspackMenuGroup" priority="0x0600">
+        <Parent guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconsMenu"/>
+      </Group>
+    </Groups>
+    
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button
         or combo box in a toolbar. -->
@@ -42,11 +57,12 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
+      
       <Button guid="guidHaleyIconsExplorerPackageCmdSet" id="IconsExplorerCommandId" priority="0x0100" type="Button">
-        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+        <Parent guid="guidHaleyIconsExplorerPackageCmdSet" id="haleyIconspackMenuGroup"/>
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>IconsExplorer</ButtonText>
+          <ButtonText>Icons Explorer</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -58,7 +74,7 @@
             bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
             inside a button definition. An important aspect of this declaration is that the element id
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
-      <Bitmap guid="guidImages" href="Resources\haley_vsix.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+      <Bitmap guid="guidImages" href="Resources\haley_vsix.png" usedList="bmpPic1"/>
     </Bitmaps>
   </Commands>
 
@@ -66,18 +82,24 @@
     <!-- This is the package guid. -->
     <GuidSymbol name="guidHaleyIconsExplorerPackage" value="{f07c8134-fe0f-4e88-b6cc-61fdd4c0efed}" />
 
+    <!--<GuidSymbol name="guidSHLMainMenu" value="{d309f791-903f-11d0-9efc-00a0c911004f}">
+      <IDSymbol name="IDM_VS_MENU_EXTENSIONS" value="0x0091" />
+    </GuidSymbol>-->
+    
+    <GuidSymbol name="guidSHLMainMenu" value="{d309f791-903f-11d0-9efc-00a0c911004f}">
+      <IDSymbol name="IDM_VS_MENU_EXTENSIONS" value="0x0091" />
+    </GuidSymbol>
+
+
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidHaleyIconsExplorerPackageCmdSet" value="{6915a83e-3065-453c-a7b2-9266a2ce2f56}">
-      <IDSymbol name="IconsExplorerCommandId" value="0x0100" />
+      <IDSymbol name="haleyIconspackMenuGroup" value="4128"/>
+      <IDSymbol name="IconsExplorerCommandId" value="256"/>
+      <IDSymbol name="haleyIconsMenu" value="41"/>
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{14853b82-5cd9-4695-9667-c6b768e3f73d}" >
       <IDSymbol name="bmpPic1" value="1" />
-      <IDSymbol name="bmpPic2" value="2" />
-      <IDSymbol name="bmpPicSearch" value="3" />
-      <IDSymbol name="bmpPicX" value="4" />
-      <IDSymbol name="bmpPicArrows" value="5" />
-      <IDSymbol name="bmpPicStrikethrough" value="6" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>
