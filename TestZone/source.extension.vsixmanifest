@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="HaleyIconsExplorer.81693cc7-9fed-4bac-8a90-1384df0cc901" Version="1.0.2" Language="en-US" Publisher="HaleyProject" />
-        <DisplayName>HaleyIconsExplorer</DisplayName>
-        <Description xml:space="preserve">Exploring the icons present inside Haley.WPF.IconsPack nuget package.</Description>
-        <ReleaseNotes>Pilot</ReleaseNotes>
-        <Icon>Haley.png</Icon>
-        <PreviewImage>Haley.png</PreviewImage>
-        <Tags>Haley Icons, Haley WPF Icons, FontAwesome Icons, Bootstrap Icons, Brand Icons</Tags>
+        <Identity Id="TestZone.5acdc84f-5fd4-447f-8102-1ed2773e5a3e" Version="1.0" Language="en-US" Publisher="Senguttuvan" />
+        <DisplayName>TestZone</DisplayName>
+        <Description xml:space="preserve">Empty VSIX Project.</Description>
     </Metadata>
     <Installation>
-        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Community">
-
-        </InstallationTarget>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
-
-        </InstallationTarget>
-
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
